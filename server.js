@@ -18,7 +18,7 @@ app.use(cors());
 // Static directory
 app.use(express.static("public"));
 /////////////////////////////////
-const placeholder = require("./routes/placeholder.js")
+const placeholder = require("./routes/liked-routes.js")
 
 // Routes
 // =============================================================
@@ -27,8 +27,7 @@ app.use(placeholder)
 // =============================================================
 
 // Change force: to true if it's cool for the site to remove database items.
-db.sequelize.sync({ force: false}).then(function () {
+
   app.listen(PORT, function () {
     console.log("App listening on PORT http://localhost:" + PORT);
   });
-});
