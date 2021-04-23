@@ -3,9 +3,11 @@ const mongoose = require("mongoose")
 
 const LikedSchema = new mongoose.Schema({
 
-    name: String,
-    description: String,
-    pic: String
+    message: {
+        type: String,
+        unique: true,
+    }
+   
 
 })
 

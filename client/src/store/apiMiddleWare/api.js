@@ -16,7 +16,10 @@ try{
     const response = await axios.request({
         url,
         method,
-        data
+        data,
+       
+
+        
     })
     //General
     dispatch(actions.apiCallSuccess(response.data))
@@ -25,7 +28,7 @@ try{
 
 }catch(error){
     //general
-dispatch(actions.apiCallFailed(error.message))
+dispatch(actions.apiCallFailed(alert(error.message)))
 //specific
 if(onError)dispatch({type: onError, payload: error})
 

@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import configureStore from "./store/configureStore";
-import { getNewDogs } from "./store/newdogs";
 import { Provider } from "react-redux";
 import Home from "./pages/Home";
 import Saved from "./pages/Saved";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import Navbar from "./components/Navbar"
 
 const store = configureStore();
 
@@ -15,10 +15,11 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
+        <Navbar/>
         <Route exact path="/">
         <Home />
         </Route>
-        <Route exact path="/liked">
+        <Route exact path="/saved">
         <Saved />
         </Route>
       </Router>

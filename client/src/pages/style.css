@@ -1,0 +1,10 @@
+.thumbUp{
+    height: 50vw;
+    width: 100%;
+    background: linear-gradient(to right, rgb(28, 41, 24), rgb(71, 122, 56), rgb(62, 247, 5));
+}
+.thumbDown{
+    height: 50vw;
+    width: 100%;
+    background: linear-gradient(to right, rgb(230, 35, 35), rgb(131, 22, 22), rgb(49, 17, 17));
+}

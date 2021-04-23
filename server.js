@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose")
 const app = express();
 const cors = require("cors");
 const db = require("./models");
@@ -19,6 +20,15 @@ app.use(cors());
 app.use(express.static("public"));
 /////////////////////////////////
 const placeholder = require("./routes/liked-routes.js")
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/elDoggo",
+   { 
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+      useFindAndModify: false 
+  });
 
 // Routes
 // =============================================================

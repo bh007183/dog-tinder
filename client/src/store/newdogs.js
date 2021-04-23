@@ -6,7 +6,7 @@ const slice = createSlice ({
     initialState: {},
     reducers: {
         setDogs: (dogs, action) => {
-            
+
            dogs["payload"] = action.payload
         }
     }
