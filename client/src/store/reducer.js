@@ -1,8 +1,7 @@
 import {combineReducers} from 'redux'
-import likedReducer from "./Liked"
-import dogsReducer from "./newdogs"
+
+import entitiesReducer from "./entities"
 
 export default combineReducers({
-    Liked: likedReducer,
-    Dogs: dogsReducer,
+    entities: entitiesReducer
 })

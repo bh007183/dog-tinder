@@ -3,19 +3,20 @@ import {apiCallBegan} from "./apiActionCreators"
 
 const slice = createSlice ({
     name: "dogs",
-    initialState: [],
+    initialState: {},
     reducers: {
         setDogs: (dogs, action) => {
-            dogs.push({dogs: action.payload})
+            
+           dogs["payload"] = action.payload
         }
     }
 })
 
-export const {setDogs} = slice.action
+export const {setDogs} = slice.actions
 
 export default slice.reducer
 
 export const getNewDogs = () => apiCallBegan({
-    url: "http://localhost:8080/api/dogs",
+    url: "https://dog.ceo/api/breeds/image/random",
     onSuccess: setDogs.type
 })

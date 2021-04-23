@@ -11,6 +11,6 @@ const slice = createSlice ({
     }
 })
 
-// export const {setLiked} = slice.action
+export const {setLiked} = slice.actions
 
 export default slice.reducer
