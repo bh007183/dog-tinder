@@ -15,7 +15,7 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(getNewDogs());
-  }, [liked.length]);
+  }, [liked.value.length]);
 
   const downClick = (event) => {
       if(event.currentTarget){

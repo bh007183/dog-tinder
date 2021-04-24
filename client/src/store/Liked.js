@@ -6,14 +6,14 @@ import{getNewDogs} from "./newdogs"
 
 const slice = createSlice ({
     name: "liked",
-    initialState: [],
+    initialState: {value: []},
     reducers: {
         setLiked: (liked, action) => {
-            liked.push(action.payload) 
+            liked.value.push(action.payload) 
         },
 
         setLikedArr: (liked, action) => {
-            liked = action.payload;
+            liked.value = action.payload;
             console.log(liked)
             // liked: action.payload
         }

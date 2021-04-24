@@ -13,11 +13,11 @@ export default function Saved() {
   const onDelete = (event) => {
     dispatch(apiRemoveLiked(event.currentTarget.value)).then(window.location.href = "/saved")
   }
-  const liked = useSelector((state) => state.entities.liked)
-  console.log(liked[0])
+  const liked = useSelector((state) => state.entities.liked.value)
+  
     return (
         <div>
-            {liked.length ? liked.map(dog => <Cards key={dog._id} delete={onDelete} id={dog._id} image={dog.message}/>) : <></>}
+            {liked.length ? [...liked].reverse().map(dog => <Cards key={dog._id} delete={onDelete} id={dog._id} image={dog.message}/>) : <></>}
         </div>
     )
 }
