@@ -28,21 +28,9 @@ app.use(placeholder)
 app.use(html)
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/elDoggo",
-   { 
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false 
-  });
+  process.env.MONGODB_URI || "mongodb://localhost/elDoggo");
 
-// Routes
-// =============================================================
 
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-
-// Change force: to true if it's cool for the site to remove database items.
 
   app.listen(PORT, function () {
     console.log("App listening on PORT http://localhost:" + PORT);
