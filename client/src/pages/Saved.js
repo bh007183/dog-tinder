@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Cards from "../components/Cards"
+import Cards from "../components/cards"
 import { useDispatch, useSelector } from "react-redux";
 import { apiGetLiked, apiRemoveLiked } from "../store/Liked";
 
