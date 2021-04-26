@@ -28,7 +28,7 @@ export default slice.reducer
 
 
 export const apiLiked = (data) => apiCallBegan({
-    url: "http://localhost:8080/api/liked",
+    url: "http://localhost:3001/api/liked",
     method: "POST",
     data: data,
     onSuccess: setLiked.type
@@ -36,13 +36,13 @@ export const apiLiked = (data) => apiCallBegan({
     
 })
 export const apiGetLiked = () => apiCallBegan({
-    url: "http://localhost:8080/api/getliked",
+    url: "http://localhost:3001/api/getliked",
     onSuccess: setLikedArr.type
     
     
 })
 export const apiRemoveLiked = (id) => apiCallBegan({
-    url: `http://localhost:8080/api/deleteliked/${id}`,
+    url: `http://localhost:3001/api/deleteliked/${id}`,
     method: "DELETE",
     onSuccess: setLikedArr.type
 })
